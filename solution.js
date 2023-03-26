@@ -125,6 +125,26 @@ class LinkedList {
   }
 }
 
+class DoublyLinkedListNode {
+  constructor(data, next = null, prev = null) {
+    this.data = data;
+    this.next = next;
+    this.prev = prev;
+  }
+}
+
+class DoublyLinkedList {
+  constructor() {
+    this.head = null;
+  }
+  insert(data, prev, next) {
+    const node = new DoublyLinkedList(data);
+    node.prev = null;
+    node.next = this.head;
+    this.head = node;
+  }
+}
+
 module.exports = {
   Node,
   LinkedList,
