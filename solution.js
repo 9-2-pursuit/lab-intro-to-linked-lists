@@ -21,8 +21,8 @@ class LinkedList {
   size() {
     let node = this.head;
     if (this.head == null) return 0;
-    let count = 1;
-    while (node.next != null) {
+    let count = 0;
+    while (node) {
       count++;
       node = node.next;
     }
@@ -32,7 +32,7 @@ class LinkedList {
   delete(key) {
     let currentNode = this.head;
     let prevNode = this.head;
-    while (currentNode.next != null) {
+    while (currentNode) {
       if (currentNode.data == key) {
         const nextNode = currentNode.next;
         prevNode.next = nextNode;
@@ -57,7 +57,7 @@ class LinkedList {
 
   search(key) {
     let node = this.head;
-    while (node.next != null) {
+    while (node) {
       if (node.data === key) {
         return node;
       }
@@ -68,7 +68,7 @@ class LinkedList {
   getKth(k) {
     let count = 1;
     let node = this.head;
-    while (node.next != null) {
+    while (node) {
       if (count === k) {
         return node;
       }
@@ -81,7 +81,7 @@ class LinkedList {
     let size = this.size();
     let node = this.head;
     let count = 1;
-    while (node.next != null) {
+    while (node) {
       if (k == size - count) {
         return node;
       }
@@ -101,18 +101,17 @@ class LinkedList {
   toArray() {
     let arr = [];
     let node = this.head;
-    while (node.next != null) {
+    while (node) {
       arr.push(node.data);
       node = node.next;
     }
-    if (node.next === null) arr.push(node.data);
     return arr;
   }
 
   containsDuplicates() {
     let arr = [];
     let node = this.head;
-    while (node.next != null) {
+    while (node) {
       if (!arr.includes(node.data)) {
         arr.push(node.data);
         node = node.next;
@@ -120,8 +119,7 @@ class LinkedList {
         return true;
       }
     }
-
-    return arr.includes(node.data);
+    return false;
   }
 }
 
