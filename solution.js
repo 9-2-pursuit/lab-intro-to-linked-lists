@@ -7,19 +7,6 @@ class Node {
   }
 }
 
-// - `insert`
-// - `size`
-// - `delete` by key
-// - `getFirst` element
-// - `getLast` element
-// - `search` an element by key and return data
-// - `getKth` retrieve kth element
-// - `getKthToLast` retrieve kth from last element
-// - `isEmpty` check if list is empty
-// - `clear` the linked list
-// - `toArray`convert data from linked list to an array
-// - `containsDuplicates` check for duplicates - return true if contains duplicates, false if not
-
 class LinkedList {
   constructor(head = null) {
     this.head = head;
