@@ -34,6 +34,19 @@ class LinkedList {
 
 
 
+search(key) {
+
+  //start from the head of the list.
+  let node = this.head;
+
+  while(node !== null && node.data !== key){
+    node = node.next;
+  }
+
+  return node 
+}
+
+
 }
 
 module.exports = {
