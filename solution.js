@@ -88,15 +88,39 @@ class LinkedList {
 
   toArray(){
 
+    function ifEmpty() {
+
+      if(head === null) {
+        return []
+      }
+    }
+    
     let arr = [];
     let currentNode = this.head;
     while(currentNode) {
-      arr.push(currentNode.data)
-      currentNode = currentNode.next
+      arr.push(currentNode.data);
+      currentNode = currentNode.next;
     }
-    return arr
+    return arr;
   }
 
+  getKth(k) {
+    let node = this.head;
+    let position = 1;
+  
+    while (node && position < k) {
+      node = node.next;
+      position++;
+    }
+  
+    if (position === k && node) {
+      return node;
+    } else {
+      return null; 
+    }
+  
+  
+  }
 
 
 
