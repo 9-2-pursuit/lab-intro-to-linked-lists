@@ -32,22 +32,35 @@ class LinkedList {
     return count;
  }
 
+ getFirst() {
+  return this.head
+
+ }
 
 
-search(key) {
 
-  //start from the head of the list.
+
+
+ delete(data) {
   let node = this.head;
-
-  while(node !== null && node.data !== key){
+  let counter = 0;
+  while (node.data !== data && node.next) {
+    counter++;
     node = node.next;
   }
-
-  return node 
+  let foundNode = node;
+  node = this.head;
+  for (let i = 1; i < counter; i++) {
+    node = node.next;
+  }
+  node.next = foundNode.next;
 }
 
 
 }
+
+
+
 
 module.exports = {
   Node,
