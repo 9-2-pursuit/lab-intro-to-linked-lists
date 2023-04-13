@@ -49,8 +49,20 @@ class LinkedList {
     return headNode;
  }
 
+ search(key) {
 
+  let node = this.head;
 
+  while(node){
+    if(node.data === key) {
+      return node
+    }
+      node = node.next
+    }
+
+  }
+
+  
 
 
  delete(data) {
