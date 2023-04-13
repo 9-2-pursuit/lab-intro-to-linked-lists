@@ -62,9 +62,6 @@ class LinkedList {
 
   }
 
-  
-
-
  delete(data) {
   let node = this.head;
   let counter = 0;
@@ -80,6 +77,9 @@ class LinkedList {
   node.next = foundNode.next;
 }
 
+  isEmpty() {
+    return this.head === null ? true : false;
+  }
 
 }
 
