@@ -119,9 +119,27 @@ class LinkedList {
       return null; 
     }
   
-  
+
+
   }
 
+  getKthToLast(k) {
+    
+   let length = 0
+   let node = this.head
+   while(node){
+    length++
+    node = node.next
+   }
+
+const position = length - k
+
+node = this.head;
+for(let i = 1; i < position; i++){
+  node = node.next
+}
+return node
+  }
 
 
 
