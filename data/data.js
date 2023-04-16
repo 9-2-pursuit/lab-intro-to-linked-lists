@@ -1,5 +1,9 @@
 const nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 0];
 
+// post insetion [3, 2, 1]
+// get kthfromLast(1) = 2
+
+
 const words = [
   "the",
   "quick",
@@ -16,3 +20,4 @@ module.exports = {
   nums,
   words,
 };
+
