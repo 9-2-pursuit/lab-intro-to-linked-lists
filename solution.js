@@ -123,6 +123,24 @@ class LinkedList {
 
   }
 
+
+
+  containsDuplicates() {
+
+    const foundValue = new Set();
+    let node = this.head;
+
+    while(node) {
+      if(foundValue.has(node.data)){
+        return true
+      }else {
+        foundValue.add(node.data) 
+        node = node.next;
+      }
+    }
+    return false
+  }
+
   getKthToLast(k) {
     
    let length = 0
